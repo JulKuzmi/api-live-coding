@@ -5,7 +5,9 @@ import { loginUser, registerUser } from "../api.js";
   
     const renderForm = () => {
       const appHtml = `
-       <h1>Список задач</h1>
+      <div class="container">
+      <section id="content">
+       <h1 class="title">Список задач</h1>
        <div class="form">
          <h3 class="form-title">Форма ${isLoginMode ? 'входа' : 'регистрации'}</h3>
        <div class="form-row">
@@ -19,9 +21,11 @@ import { loginUser, registerUser } from "../api.js";
          <input type="password" id="password-input" class="input"/>
        </div>
        <br></br>
-       <button class="button" id="login-button">${isLoginMode ? 'Войти' : 'Зарегистрироваться'}</button>
+       <button class="button btn-8" id="login-button">${isLoginMode ? 'Войти' : 'Зарегистрироваться'}</button>
        <br></br>
-       <button class="button" id="toggle-button">Перейти ${isLoginMode ? 'к регистрации' : 'ко входу'}</button>
+       <button class="button btn-8" id="toggle-button">Перейти ${isLoginMode ? 'к регистрации' : 'ко входу'}</button>
+       </section>
+       </div>
        </div>`;
      
       appEl.innerHTML = appHtml;
