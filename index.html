@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Проект "Комменты"</title>
+    <title>Урок Асинхронность</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <div class="container">
-      <ul class="comments" id="comment-field">
-         <!--список рендерится из js -->
-      </ul>
-      <div class="loading"></div>
-      <div class="add-form">
-        <input 
+    <div id="app"></div>
+    <h1>Список задач</h1>
+    <ul class="tasks" id="list">
+    </ul>
+    <br />
+    <div class="form">
+      <h3 class="form-title">Форма добавления</h3>
+      <div class="form-row">
+        Что нужно сделать:
+        <input
           type="text"
-          class="add-form-name"
-          placeholder="Введите ваше имя" id="comment-name"
+          id="text-input"
+          class="input"
+          placeholder="Выпить кофе"
         />
-        <textarea 
-          type="textarea"
-          class="add-form-text"
-          placeholder="Введите ваш коментарий" id="comment-input"
-          rows="4"
-        ></textarea>
-        <div class="add-form-row">
-          <button class="add-form-button"  id="comment-button">Написать</button>
-        </div>
+      </div>
+      <br />
+      <button class="button" id="add-button">Добавить</button>
     </div>
   </body>
   <script type="module" src="script.js"></script>
